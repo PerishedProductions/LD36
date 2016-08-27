@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class UIManager : MonoBehaviour {
@@ -25,5 +26,12 @@ public class UIManager : MonoBehaviour {
     {
         DontDestroyOnLoad(this.gameObject);
         _instance = this;
+    }
+
+    public void ActionMenu(Vector3 mousePosition)
+    {
+        GameObject canvas = GameObject.Find("ActionCanvas");
+        canvas.transform.position = mousePosition;
+        canvas.transform.GetChild(0).gameObject.SetActive(true);
     }
 }

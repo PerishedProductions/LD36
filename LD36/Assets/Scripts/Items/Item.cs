@@ -34,6 +34,6 @@ public class Item : MonoBehaviour {
 
     public virtual void UseItem()
     {
-        Debug.Log("Using base item!");
+        GameManager.Instance.OpenActionMenu(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 }

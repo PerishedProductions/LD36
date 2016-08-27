@@ -50,4 +50,10 @@ public class GameManager : MonoBehaviour
     {
         return GameObject.Find("Inventory").GetComponent<Inventory>();
     }
+
+    public void OpenActionMenu(Vector3 mousePosition)
+    {
+        UIManager.Instance.ActionMenu(mousePosition);
+    }
+
 }

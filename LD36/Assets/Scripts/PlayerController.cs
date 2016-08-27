@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
     public float speed = 10;
     public Interactable interactable;
-
+    private List<Item> items = new List<Item>();
     public bool walking = false;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -46,5 +48,11 @@ public class PlayerController : MonoBehaviour {
             interactable = hit.transform.root.GetComponent<Interactable>();
             walking = true;
         }
+    }
+
+    public void AddItem( Item item )
+    {
+        Debug.Log("Added item: " + item);
+        items.Add(item);
     }
 }

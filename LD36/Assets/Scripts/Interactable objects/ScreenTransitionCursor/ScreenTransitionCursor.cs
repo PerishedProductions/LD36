@@ -7,25 +7,15 @@ public enum SpawnTypes {Left, Middle, Right};
 public class ScreenTransitionCursor : Interactable
 {
     public string screen;
-    public SpawnTypes spawnType = SpawnTypes.Middle;
+    public Vector3 appearPoint;
+    public Vector3 newCamPosition;
 
     private GameObject player;
 
     public override void Interact()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        switch (spawnType)
-        {
-            case SpawnTypes.Left:
-                player.transform.position = new Vector3(-7, 0, 0);
-                break;
-            case SpawnTypes.Middle:
-                player.transform.position = new Vector3(0, 0, 0);
-                break;
-            case SpawnTypes.Right:
-                player.transform.position = new Vector3(7, 0, 0);
-                break;
-        }
-        SceneManager.LoadScene(screen);
+        player.transform.position = appearPoint;
+        Camera.main.transform.position = newCamPosition;
     }
 }

@@ -20,7 +20,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     {
         if (item != null && isOver && Input.GetMouseButtonDown(0))
         {
-            GameManager.Instance.OpenActionMenu(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            GameManager.Instance.OpenActionMenu(new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0));
         }
     }
 

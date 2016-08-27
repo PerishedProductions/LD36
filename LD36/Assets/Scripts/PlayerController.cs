@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour {
     private List<Item> items = new List<Item>();
     public bool walking = false;
     private Animator anim;
-    
 
-	// Use this for initialization
-	void Awake () {
+    private bool faceRight = true;
+
+
+    // Use this for initialization
+    void Awake () {
         DontDestroyOnLoad(this);
         anim = this.GetComponent<Animator>();
 	}
@@ -31,6 +33,15 @@ public class PlayerController : MonoBehaviour {
             float step = speed * Time.deltaTime;
             if (this.transform.position.x != interactable.transform.position.x)
             {
+                if (interactable.transform.position.x > this.transform.position.x && !faceRight)
+                {
+                    Flip();
+                }
+                else if (interactable.transform.position.x < this.transform.position.x && faceRight)
+                {
+                    Flip();
+                }
+
                 this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector2(interactable.transform.position.x, this.transform.position.y), step);
             }
             else
@@ -41,6 +52,15 @@ public class PlayerController : MonoBehaviour {
         }
 
 	}
+
+    void Flip()
+    {
+        faceRight = !faceRight;
+        Vector3 theScale = transform.localScale;
+
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 
     void Click()
     {
@@ -54,9 +74,10 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void AddItem( Item item )
+    public void AddItem( InventoryItem item )
     {
-        Debug.Log("Added item: " + item);
-        items.Add(item);
+        Inventory inv = GameManager.Instance.GetInventory();
+        inv.UpdateInventory(item);
+        Debug.Log("Added item: " + item.name);
     }
 }

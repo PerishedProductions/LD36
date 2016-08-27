@@ -45,4 +45,9 @@ public class GameManager : MonoBehaviour
     {
         return UIManager.Instance;
     }
+
+    public Inventory GetInventory()
+    {
+        return GameObject.Find("Inventory").GetComponent<Inventory>();
+    }
 }

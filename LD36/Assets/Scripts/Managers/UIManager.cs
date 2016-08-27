@@ -26,4 +26,5 @@ public class UIManager : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         _instance = this;
     }
+    
 }

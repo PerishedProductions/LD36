@@ -11,14 +11,14 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
     private bool isOver;
 
-    void Start()
+    void Awake()
     {
         image = this.GetComponent<Image>();
     }
 
     void Update()
     {
-        if (isOver && Input.GetMouseButtonDown(0) && item != null)
+        if (item != null && isOver && Input.GetMouseButtonDown(0))
         {
             GameManager.Instance.OpenActionMenu(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }

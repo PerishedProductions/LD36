@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour {
     public Interactable interactable;
     private List<Item> items = new List<Item>();
     public bool walking = false;
+    private Animator anim;
     
 
 	// Use this for initialization
 	void Awake () {
         DontDestroyOnLoad(this);
+        anim = this.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour {
         {
             Click();
         }
+
+        anim.SetBool("walking", walking);
 
         if (walking)
         {

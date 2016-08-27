@@ -3,8 +3,12 @@ using System.Collections;
 
 public class Interactable : MonoBehaviour {
 
-	// Use this for initialization
-	protected virtual void Start ()
+    public bool dialog;
+    public string actorName;
+    public string message;
+
+    // Use this for initialization
+    protected virtual void Start ()
     {
 	
 	}

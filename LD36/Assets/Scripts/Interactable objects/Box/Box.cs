@@ -4,6 +4,7 @@ using System.Collections;
 public class Box : Interactable {
 
     public Item item;
+    
     public override void Interact()
     {
         Debug.Log("I am a box you fool!");
@@ -11,7 +12,10 @@ public class Box : Interactable {
         {
             GameManager.Instance.GetInventory().AddItem(item);
             item = null;
-            DialogManager.Instance.Dialog("Bobba", "OMG i found a magnifying glass");
+            if (dialog)
+            {
+                DialogManager.Instance.Dialog(actorName, message);
+            }
             //TODO: maybe do some stuff xD
         }
         

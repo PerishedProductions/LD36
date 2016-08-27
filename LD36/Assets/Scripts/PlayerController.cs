@@ -74,10 +74,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void AddItem( InventoryItem item )
+    public void AddItem( Item item )
     {
-        Inventory inv = GameManager.Instance.GetInventory();
-        inv.UpdateInventory(item);
         Debug.Log("Added item: " + item.name);
     }
 }

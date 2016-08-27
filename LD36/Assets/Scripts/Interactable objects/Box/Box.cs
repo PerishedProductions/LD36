@@ -10,8 +10,9 @@ public class Box : Interactable {
         PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         if( item != null)
         {
-            InventoryItem instancedItem = (InventoryItem)Resources.Load("Items/MagnifyingGlass.prefab");
-            player.AddItem(instancedItem);
+            GameManager.Instance.GetInventory().AddItem(item);
+            item = null;
+            //TODO: maybe do some stuff xD
         }
         
     }

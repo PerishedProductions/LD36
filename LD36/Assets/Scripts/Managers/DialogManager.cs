@@ -28,7 +28,7 @@ public class DialogManager : MonoBehaviour {
 
     void Dialog(string actor, string text)
     {
-        
+           
     }
 
 }

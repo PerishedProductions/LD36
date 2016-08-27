@@ -40,4 +40,9 @@ public class GameManager : MonoBehaviour
             Instantiate(playerPrefab);
         }
     }
+
+    public UIManager GetUI()
+    {
+        return UIManager.Instance;
+    }
 }

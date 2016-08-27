@@ -12,7 +12,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     private bool isOver;
 
     void Awake()
-    {
+    {   
         image = this.GetComponent<Image>();
     }
 

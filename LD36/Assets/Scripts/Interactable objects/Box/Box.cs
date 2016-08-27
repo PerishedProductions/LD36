@@ -7,11 +7,11 @@ public class Box : Interactable {
     public override void Interact()
     {
         Debug.Log("I am a box you fool!");
-        PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         if( item != null)
         {
             GameManager.Instance.GetInventory().AddItem(item);
             item = null;
+            DialogManager.Instance.Dialog("Bobba", "OMG i found a magnifying glass");
             //TODO: maybe do some stuff xD
         }
         

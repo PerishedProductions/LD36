@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour {
 
     public float speed = 10;
     public Interactable interactable;
-    private List<Item> items = new List<Item>();
     public bool walking = false;
     private Animator anim;
 

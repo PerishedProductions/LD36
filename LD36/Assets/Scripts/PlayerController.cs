@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     public float speed = 10;
-    public Vector3 target;
+    public Interactable interactable;
 
     public bool walking = false;
 
@@ -23,12 +23,13 @@ public class PlayerController : MonoBehaviour {
         if (walking)
         {
             float step = speed * Time.deltaTime;
-            if (this.transform.position.x != target.x)
+            if (this.transform.position.x != interactable.transform.position.x)
             {
-                this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector2(target.x, this.transform.position.y), step);
+                this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector2(interactable.transform.position.x, this.transform.position.y), step);
             }
             else
             {
+                interactable.Interact();
                 walking = false;
             }
         }
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour {
         if (hit)
         {
             Debug.Log(hit.transform.tag);
-            target = hit.transform.position;
+            interactable = hit.transform.root.GetComponent<Interactable>();
             walking = true;
         }
     }

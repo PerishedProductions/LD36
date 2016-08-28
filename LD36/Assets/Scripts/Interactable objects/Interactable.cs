@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Interactable : MonoBehaviour {
-
+    public string name;
     public bool dialog;
     public string actorName;
     public string message;
@@ -63,6 +63,6 @@ public class Interactable : MonoBehaviour {
 
     public virtual void Interact( Item Useditem )
     {
-        DialogManager.Instance.Dialog("Nothing happends when using " + Useditem.ObtainItemName() + " with this object.", 0.04f);
+        DialogManager.Instance.Dialog(string.Format("Nothing happends when using {0} with the {1}.", Useditem.ObtainItemName(), name ), 0.04f);
     }
 }

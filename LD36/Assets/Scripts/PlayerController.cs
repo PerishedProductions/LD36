@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public Interactable interactable;
     public bool walking = false;
     private Animator anim;
+    private Item itemUsing;
 
     private bool faceRight = true;
 
@@ -45,7 +46,15 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
-                interactable.Interact();
+                if (itemUsing == null)
+                {
+                    interactable.Interact();
+                }
+                else
+                {
+                    interactable.Interact(itemUsing);
+                    itemUsing = null;
+                }
                 walking = false;
             }
         }
@@ -73,8 +82,9 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void AddItem( Item item )
+    public void UseItem(Item item)
     {
-        Debug.Log("Added item: " + item.name);
+        Debug.Log("Used item: " + item);
+        itemUsing = item;
     }
 }

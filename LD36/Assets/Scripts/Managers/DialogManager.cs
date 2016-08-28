@@ -27,19 +27,31 @@ public class DialogManager : MonoBehaviour {
         _instance = this;
     }
 
-    public void Dialog(string actor, string text)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="actor">The name of the person speaking</param>
+    /// <param name="text">What the person speaking is saying</param>
+    /// <param name="textspeed">how fast the text goes(lower is faster)</param>
+    public void Dialog(string actor, string text, float textspeed)
     {
         DialogBox dialogBox = GameObject.Find("DialogBox").GetComponent<DialogBox>();
         dialogBox.panel.SetActive(true);
         dialogBox.actor.text = actor;
-        StartCoroutine(TypeText(text, dialogBox, 0.02f));
+        StartCoroutine(TypeText(text, dialogBox, textspeed));
     }
 
-    public void Dialog(string text)
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="text">What the person speaking is saying</param>
+    /// <param name="textspeed">how fast the text goes(lower is faster)</param>
+    public void Dialog(string text, float textspeed)
     {
         DialogBox dialogBox = GameObject.Find("DialogBox").GetComponent<DialogBox>();
         dialogBox.panel.SetActive(true);
-        StartCoroutine(TypeText(text, dialogBox, 0.2f));
+        dialogBox.actor.text = "";
+        StartCoroutine(TypeText(text, dialogBox, textspeed));
     }
 
     IEnumerator TypeText(string message, DialogBox dialogBox, float letterPause)

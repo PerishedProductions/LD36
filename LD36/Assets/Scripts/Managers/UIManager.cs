@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour {
 
     public void ActionMenu(Vector3 mousePosition)
     {
-        GameObject canvas = GameObject.Find("ActionCanvas");
+        GameObject canvas = GameObject.Find("ActionBox");
         canvas.transform.position = mousePosition;
         canvas.transform.GetChild(0).gameObject.SetActive(true);
     }

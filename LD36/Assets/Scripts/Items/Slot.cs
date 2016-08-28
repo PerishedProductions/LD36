@@ -20,7 +20,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     {
         if (item != null && isOver && Input.GetMouseButtonDown(0))
         {
-            GameManager.Instance.OpenActionMenu(new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0));
+            UIManager.Instance.ActionMenu(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+            GameManager.Instance.GetActionMenu().item = item;
         }
     }
 
@@ -35,13 +36,11 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse enter");
         isOver = true;
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse exit");
         isOver = false;
     }
 }

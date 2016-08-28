@@ -14,7 +14,7 @@ public class Box : Interactable {
             item = null;
             if (dialog)
             {
-                DialogManager.Instance.Dialog(actorName, message);
+                DialogManager.Instance.Dialog(actorName, message, 0.02f);
             }
             //TODO: maybe do some stuff xD
         }       
@@ -24,7 +24,7 @@ public class Box : Interactable {
     {
         if( Useditem is MagnifyingGlass )
         {
-            DialogManager.Instance.Dialog("After close observation you have concluded that this is indeed a box.");
+            DialogManager.Instance.Dialog("After close observation you have concluded that this is indeed a box.", 0.04f);
         }
 
     }

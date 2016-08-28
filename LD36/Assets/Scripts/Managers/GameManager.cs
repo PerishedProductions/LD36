@@ -32,13 +32,19 @@ public class GameManager : MonoBehaviour
         _instance = this;
     }
 
-    public void GetPlayer()
+    public PlayerController GetPlayer()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
             Instantiate(playerPrefab);
         }
+        return player.GetComponent<PlayerController>();
+    }
+
+    public ActionMenu GetActionMenu()
+    {
+        return GameObject.Find("ActionBox").GetComponent<ActionMenu>();
     }
 
     public UIManager GetUI()
@@ -50,10 +56,4 @@ public class GameManager : MonoBehaviour
     {
         return GameObject.Find("Inventory").GetComponent<Inventory>();
     }
-
-    public void OpenActionMenu(Vector3 mousePosition)
-    {
-        UIManager.Instance.ActionMenu(mousePosition);
-    }
-
 }

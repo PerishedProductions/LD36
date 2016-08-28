@@ -57,7 +57,7 @@ public class Interactable : MonoBehaviour {
         }
         else
         {
-            DialogManager.Instance.Dialog("Nothing happends.", 0.04f);
+            DialogManager.Instance.Dialog("You found nothing of interest.", 0.04f);
         }
     }
 

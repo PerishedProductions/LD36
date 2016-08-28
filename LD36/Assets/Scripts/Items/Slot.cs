@@ -32,6 +32,10 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
             image.sprite = item.itemIcon;
             image.color = new Color(255, 255, 255, 255);
         }
+        else
+        {
+            //TODO change spirte and color back to defaults (empty slot)
+        }
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)

@@ -6,7 +6,6 @@ public enum SpawnTypes {Left, Middle, Right};
 
 public class ScreenTransitionCursor : Interactable
 {
-    public string screen;
     public Vector3 appearPoint;
     public Vector3 newCamPosition;
 

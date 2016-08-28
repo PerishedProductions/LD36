@@ -20,4 +20,17 @@ public class Inventory : MonoBehaviour {
 
         return false;
     }
+
+    public void RemoveItem( Item itemToRemove )
+    {
+        Debug.Log(itemToRemove);
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item == itemToRemove)
+            {
+                slots[i].item = null;
+                slots[i].ChangeIcon();
+            }
+        }
+    }
 }

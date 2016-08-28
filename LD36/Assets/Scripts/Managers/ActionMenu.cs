@@ -13,7 +13,7 @@ public class ActionMenu : MonoBehaviour {
 
     public void LookAt()
     {
-        //Do Stuff
+        item.ReadDescription();
         Close();
     }
 

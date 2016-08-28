@@ -2,22 +2,11 @@
 using System.Collections;
 
 public class Box : Interactable {
-
-    public Item item;
     
     public override void Interact()
     {
-        Debug.Log("I am a box you fool!");
-        if( item != null)
-        {
-            GameManager.Instance.GetInventory().AddItem(item);
-            item = null;
-            if (dialog)
-            {
-                DialogManager.Instance.Dialog(actorName, message, 0.02f);
-            }
-            //TODO: maybe do some stuff xD
-        }       
+        DialogManager.Instance.Dialog("You search around in the box.", 0.04f);
+        base.Interact();
     }
 
     public override void Interact(Item Useditem)
@@ -26,6 +15,9 @@ public class Box : Interactable {
         {
             DialogManager.Instance.Dialog("After close observation you have concluded that this is indeed a box.", 0.04f);
         }
-
+        else
+        {
+            base.Interact(Useditem);
+        }
     }
 }

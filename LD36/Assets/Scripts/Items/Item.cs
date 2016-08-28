@@ -4,6 +4,8 @@ using System.Collections;
 public class Item : MonoBehaviour {
 
     public Sprite itemIcon;
+    public string description = "";
+    public string itemName = "";
 
     // Use this for initialization
     protected virtual void Start()
@@ -27,13 +29,16 @@ public class Item : MonoBehaviour {
 
     }
 
-    public virtual void SelectItem()
+    public virtual string ObtainItemName()
     {
-        Debug.Log("Select base item!");
+        return itemName;
     }
 
-    public virtual void UseItem()
+    public virtual void ReadDescription()
     {
-        
+        if( description != "")
+        {
+            DialogManager.Instance.Dialog(description, 0.04f);
+        }
     }
 }

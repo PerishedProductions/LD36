@@ -5,7 +5,7 @@ public class Inventory : MonoBehaviour {
 
     public Slot[] slots;
 
-    public void AddItem(Item itemToAdd)
+    public bool AddItem(Item itemToAdd)
     {
         Debug.Log(itemToAdd);
         for (int i = 0; i < slots.Length; i++)
@@ -14,8 +14,10 @@ public class Inventory : MonoBehaviour {
             {
                 slots[i].item = itemToAdd;
                 slots[i].ChangeIcon();
-                return;
+                return true;
             }
         }
+
+        return false;
     }
 }

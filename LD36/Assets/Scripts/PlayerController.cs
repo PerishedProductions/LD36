@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour {
     public float speed = 10;
     public Interactable interactable;
     public bool walking = false;
-    private Animator anim;
+    public Animator anim;
     private Item itemUsing;
+    public Light backlight;
+    public Light torchlight;
 
     private bool faceRight = true;
 

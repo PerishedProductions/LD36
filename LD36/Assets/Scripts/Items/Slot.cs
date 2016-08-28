@@ -10,10 +10,12 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     public Image image;
 
     private bool isOver;
+    private Sprite defaultBG;
 
     void Awake()
     {   
         image = this.GetComponent<Image>();
+        defaultBG = image.sprite;
     }
 
     void Update()
@@ -34,7 +36,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
         }
         else
         {
-            //TODO change spirte and color back to defaults (empty slot)
+            image.sprite = defaultBG;
+            image.color = new Color(0, 0, 0, 0.39f);
         }
     }
 

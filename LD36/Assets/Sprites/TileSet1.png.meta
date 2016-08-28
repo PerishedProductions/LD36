@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d77f7b19ace7eea49a7882b425b53600
-timeCreated: 1472399243
+timeCreated: 1472411640
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -127,10 +127,10 @@ TextureImporter:
       name: TileSet1_5
       rect:
         serializedVersion: 2
-        x: 405
+        x: 393
         y: 0
-        width: 20
-        height: 27
+        width: 44
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

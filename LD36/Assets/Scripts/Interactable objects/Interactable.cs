@@ -40,7 +40,7 @@ public class Interactable : MonoBehaviour {
                 {
                     if (message == "")
                     {
-                        DialogManager.Instance.Dialog(actorName, "Obtained " + item.ObtainItemName(), 0.02f);
+                        DialogManager.Instance.Dialog(actorName, "Obtained " + item.ObtainItemName() + "!", 0.02f);
                     }
                     else
                     {
@@ -57,7 +57,7 @@ public class Interactable : MonoBehaviour {
         }
         else
         {
-            DialogManager.Instance.Dialog("Nothing happends", 0.04f);
+            DialogManager.Instance.Dialog("Nothing happends.", 0.04f);
         }
     }
 

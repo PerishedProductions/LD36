@@ -4,7 +4,15 @@ using System.Collections;
 
 public class DialogManager : MonoBehaviour {
 
+    private struct DialogInfo
+    {
+        public string actor;
+        public string text;
+        public float textSpeed;
+    }
+
     private static DialogManager _instance;
+    private Queue messageQueue = new Queue();
 
     public static DialogManager Instance
     {
@@ -27,6 +35,22 @@ public class DialogManager : MonoBehaviour {
         _instance = this;
     }
 
+    void Update()
+    {
+        if( messageQueue.Count > 0)
+        {
+            DialogBox dialogBox = GameObject.Find("DialogBox").GetComponent<DialogBox>();
+            if( !dialogBox.panel.activeSelf)
+            {
+                dialogBox.panel.SetActive(true);
+
+                DialogInfo dialogInfo = (DialogInfo)messageQueue.Dequeue();
+                dialogBox.actor.text = dialogInfo.actor;
+                StartCoroutine(TypeText(dialogInfo.text, dialogBox, dialogInfo.textSpeed));
+            }
+        }
+    }
+
     /// <summary>
     /// 
     /// </summary>
@@ -35,10 +59,12 @@ public class DialogManager : MonoBehaviour {
     /// <param name="textspeed">how fast the text goes(lower is faster)</param>
     public void Dialog(string actor, string text, float textspeed)
     {
-        DialogBox dialogBox = GameObject.Find("DialogBox").GetComponent<DialogBox>();
-        dialogBox.panel.SetActive(true);
-        dialogBox.actor.text = actor;
-        StartCoroutine(TypeText(text, dialogBox, textspeed));
+        DialogInfo dialogInfo = new DialogInfo();
+        dialogInfo.actor = actor;
+        dialogInfo.text = text;
+        dialogInfo.textSpeed = textspeed;
+
+        messageQueue.Enqueue(dialogInfo);
     }
 
     /// <summary>
@@ -48,10 +74,7 @@ public class DialogManager : MonoBehaviour {
     /// <param name="textspeed">how fast the text goes(lower is faster)</param>
     public void Dialog(string text, float textspeed)
     {
-        DialogBox dialogBox = GameObject.Find("DialogBox").GetComponent<DialogBox>();
-        dialogBox.panel.SetActive(true);
-        dialogBox.actor.text = "";
-        StartCoroutine(TypeText(text, dialogBox, textspeed));
+        Dialog("", text, textspeed);
     }
 
     IEnumerator TypeText(string message, DialogBox dialogBox, float letterPause)

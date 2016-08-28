@@ -1,9 +1,38 @@
 fileFormatVersion: 2
 guid: 3ef9d8ca78cd02f4caa76af79df8e8f7
-timeCreated: 1472404913
+timeCreated: 1472408535
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: hieroglyphs_0
+    21300002: hieroglyphs_1
+    21300004: hieroglyphs_2
+    21300006: hieroglyphs_3
+    21300008: hieroglyphs_4
+    21300010: hieroglyphs_5
+    21300012: hieroglyphs_6
+    21300014: hieroglyphs_7
+    21300016: hieroglyphs_8
+    21300018: hieroglyphs_9
+    21300020: hieroglyphs_10
+    21300022: hieroglyphs_11
+    21300024: hieroglyphs_12
+    21300026: hieroglyphs_13
+    21300028: hieroglyphs_14
+    21300030: hieroglyphs_15
+    21300032: hieroglyphs_16
+    21300034: hieroglyphs_17
+    21300036: hieroglyphs_18
+    21300038: hieroglyphs_19
+    21300040: hieroglyphs_20
+    21300042: hieroglyphs_21
+    21300044: hieroglyphs_22
+    21300046: hieroglyphs_23
+    21300048: hieroglyphs_24
+    21300050: hieroglyphs_25
+    21300052: hieroglyphs_26
+    21300054: hieroglyphs_27
+    21300056: hieroglyphs_28
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +59,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +67,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,7 +80,384 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: hieroglyphs_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 221
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 248
+        width: 50
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 246
+        width: 41
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 239
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 221
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 168
+        width: 27
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_6
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 193
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_7
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 191
+        width: 46
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_8
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 182
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 182
+        width: 50
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 109
+        width: 9
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_11
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 118
+        width: 10
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_12
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 122
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 151
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_14
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 132
+        width: 45
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_15
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 61
+        width: 11
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_16
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 61
+        width: 9
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_17
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 97
+        width: 41
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_18
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 83
+        width: 9
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_19
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 73
+        width: 46
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_20
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 80
+        width: 41
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_21
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 54
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_22
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 54
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 11
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_24
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 5
+        width: 11
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_25
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 9
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_26
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 9
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_27
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 22
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hieroglyphs_28
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 22
+        width: 46
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

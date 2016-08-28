@@ -41,4 +41,9 @@ public class Item : MonoBehaviour {
             DialogManager.Instance.Dialog(description, 0.04f);
         }
     }
+
+    public virtual void UseItem()
+    {
+        return;
+    }
 }

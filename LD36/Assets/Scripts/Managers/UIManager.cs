@@ -34,4 +34,11 @@ public class UIManager : MonoBehaviour {
         canvas.transform.position = mousePosition;
         canvas.transform.GetChild(0).gameObject.SetActive(true);
     }
+
+    public void OpenBook()
+    {
+        GameObject book = GameObject.Find("Book");
+        Debug.Log(book);
+        book.SetActive(true);
+    }
 }

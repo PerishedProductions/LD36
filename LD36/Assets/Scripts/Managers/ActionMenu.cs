@@ -7,20 +7,20 @@ public class ActionMenu : MonoBehaviour {
 
 	public void UseItem()
     {
+        GameManager.Instance.GetPlayer().UseItem(item);
+        Close();
+    }
+
+    public void LookAt()
+    {
         if (item is Book)
         {
             item.UseItem();
         }
         else
         {
-            GameManager.Instance.GetPlayer().UseItem(item);
+            item.ReadDescription();
         }
-        Close();
-    }
-
-    public void LookAt()
-    {
-        item.ReadDescription();
         Close();
     }
 

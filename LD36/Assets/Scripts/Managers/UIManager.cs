@@ -37,8 +37,7 @@ public class UIManager : MonoBehaviour {
 
     public void OpenBook()
     {
-        GameObject book = GameObject.Find("Book");
-        Debug.Log(book);
+        GameObject book = GameObject.Find("Book").transform.GetChild(0).gameObject;
         book.SetActive(true);
     }
 }

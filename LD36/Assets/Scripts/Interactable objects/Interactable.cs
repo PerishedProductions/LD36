@@ -63,6 +63,6 @@ public class Interactable : MonoBehaviour {
 
     public virtual void Interact( Item Useditem )
     {
-        DialogManager.Instance.Dialog(string.Format("Nothing happends when using {0} with the {1}.", Useditem.ObtainItemName(), name ), 0.04f);
+        DialogManager.Instance.Dialog(string.Format("Nothing happens when using {0} with the {1}.", Useditem.ObtainItemName(), name ), 0.04f);
     }
 }

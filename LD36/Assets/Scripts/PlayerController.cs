@@ -72,13 +72,17 @@ public class PlayerController : MonoBehaviour {
 
     void Click()
     {
-        int layerMask = 1 << 8;
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Vector2.zero, 10000f, layerMask);
-        if (hit)
+        DialogBox dialogBox = GameObject.Find("DialogBox").GetComponent<DialogBox>();
+        if (!dialogBox.panel.activeSelf)
         {
-            Debug.Log(hit.transform.tag);
-            interactable = hit.transform.root.GetComponent<Interactable>();
-            walking = true;
+            int layerMask = 1 << 8;
+            RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), Vector2.zero, 10000f, layerMask);
+            if (hit)
+            {
+                Debug.Log(hit.transform.tag);
+                interactable = hit.transform.root.GetComponent<Interactable>();
+                walking = true;
+            }
         }
     }
 

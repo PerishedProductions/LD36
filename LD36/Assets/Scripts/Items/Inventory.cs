@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour {
             {
                 slots[i].item = itemToAdd;
                 slots[i].ChangeIcon();
+                if (itemToAdd is Torch)
+                    ToggleTorch(itemToAdd);
                 return true;
             }
         }
@@ -30,7 +32,25 @@ public class Inventory : MonoBehaviour {
             {
                 slots[i].item = null;
                 slots[i].ChangeIcon();
+                if (itemToRemove is Torch)
+                    ToggleTorch(itemToRemove);
             }
         }
     }
+
+    public void ToggleTorch(Item itemToCheck)
+    {
+        PlayerController player = GameManager.Instance.GetPlayer();
+        if (!player.torchlight.gameObject.activeSelf)
+        {
+            player.torchlight.gameObject.SetActive(true);
+            player.anim.SetBool("hasTorch", true);
+        }
+        else
+        {
+            player.torchlight.gameObject.SetActive(false);
+            player.anim.SetBool("hasTorch", false);
+        }
+    }
+
 }

@@ -17,7 +17,15 @@ public class Box : Interactable {
                 DialogManager.Instance.Dialog(actorName, message);
             }
             //TODO: maybe do some stuff xD
+        }       
+    }
+
+    public override void Interact(Item Useditem)
+    {
+        if( Useditem is MagnifyingGlass )
+        {
+            DialogManager.Instance.Dialog("After close observation you have concluded that this is indeed a box.");
         }
-        
+
     }
 }

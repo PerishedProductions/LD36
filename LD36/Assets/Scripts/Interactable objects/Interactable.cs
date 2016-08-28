@@ -33,4 +33,9 @@ public class Interactable : MonoBehaviour {
     {
         Debug.Log("Base interactable object");
     }
+
+    public virtual void Interact( Item Useditem )
+    {
+        Debug.Log("Base interactable got interacted with item: " + Useditem);
+    }
 }

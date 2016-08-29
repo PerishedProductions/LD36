@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Inventory : MonoBehaviour {
 
@@ -36,6 +37,18 @@ public class Inventory : MonoBehaviour {
                     ToggleTorch(itemToRemove);
             }
         }
+    }
+
+    public bool SearchInventory(Type itemToCheck)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (slots[i].item != null && slots[i].item.GetType() == itemToCheck)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void ToggleTorch(Item itemToCheck)

@@ -45,6 +45,10 @@ public class CodeDoor : Door {
         {
             DialogManager.Instance.Dialog("You see nothing interesting on the door.", 0.02f);
         }
+        else if( Locked && Useditem is Key)
+        {
+            DialogManager.Instance.Dialog("The door does not have any holes to fit a key in.", 0.02f);
+        }
         else
         {
             base.Interact(Useditem);

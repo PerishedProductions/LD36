@@ -24,12 +24,11 @@ public class Door : ScreenTransitionCursor
         {
             DialogManager.Instance.Dialog("This seems to expand into more hallways of the pyramid.", 0.04f);
         }
-        else if( Useditem is Key )
+        else if( Locked && Useditem is Key )
         {
             Locked = false;
             GameManager.Instance.GetInventory().RemoveItem(Useditem);
             ChangeSprite(unlockedSprite);
-            base.Interact();
         }
         else
         {

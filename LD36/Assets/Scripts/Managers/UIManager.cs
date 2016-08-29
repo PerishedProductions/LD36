@@ -40,4 +40,12 @@ public class UIManager : MonoBehaviour {
         GameObject book = GameObject.Find("Book").transform.GetChild(0).gameObject;
         book.SetActive(true);
     }
+
+    public void OpenBookAndTablet()
+    {
+        GameObject book = GameObject.Find("Book").transform.GetChild(0).gameObject;
+        GameObject tablet = GameObject.Find("CodeTablet").transform.GetChild(0).gameObject;
+        book.SetActive(true);
+        tablet.SetActive(true);
+    }
 }

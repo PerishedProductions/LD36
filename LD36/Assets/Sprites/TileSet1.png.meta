@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d77f7b19ace7eea49a7882b425b53600
-timeCreated: 1472411640
+timeCreated: 1472483511
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,8 @@ TextureImporter:
     21300006: TileSet1_3
     21300008: TileSet1_4
     21300010: TileSet1_5
+    21300012: TileSet1_6
+    21300014: TileSet1_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -62,12 +64,12 @@ TextureImporter:
       name: TileSet1_0
       rect:
         serializedVersion: 2
-        x: 13
+        x: 64
         y: 0
-        width: 115
+        width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -127,12 +129,38 @@ TextureImporter:
       name: TileSet1_5
       rect:
         serializedVersion: 2
+        x: 471
+        y: 9
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TileSet1_6
+      rect:
+        serializedVersion: 2
         x: 393
         y: 0
         width: 44
         height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TileSet1_7
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 51
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

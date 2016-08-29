@@ -51,6 +51,12 @@ public class BookController : MonoBehaviour {
 
     public void CloseBook()
     {
+        GameObject tablet = GameObject.Find("CodeTablet").transform.GetChild(0).gameObject;
+        if (tablet.activeSelf)
+        {
+            this.transform.GetChild(0).gameObject.SetActive(false);
+            tablet.SetActive(false);
+        }
         this.transform.GetChild(0).gameObject.SetActive(false);
     }
 }

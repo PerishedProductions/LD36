@@ -4,6 +4,7 @@ using System.Collections;
 public class Door : ScreenTransitionCursor
 {
     public bool Locked = true;
+    public Sprite unlockedSprite;
 
     public override void Interact()
     {
@@ -27,6 +28,7 @@ public class Door : ScreenTransitionCursor
         {
             Locked = false;
             GameManager.Instance.GetInventory().RemoveItem(Useditem);
+            ChangeSprite(unlockedSprite);
             base.Interact();
         }
         else
@@ -34,4 +36,10 @@ public class Door : ScreenTransitionCursor
             base.Interact(Useditem);
         }
     }
+
+    public virtual void ChangeSprite(Sprite sprite)
+    {
+        this.GetComponent<SpriteRenderer>().sprite = sprite;
+    }
+
 }

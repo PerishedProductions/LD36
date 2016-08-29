@@ -15,6 +15,7 @@ public class CodeDoor : Door {
             if( progress == code.Length)
             {
                 DialogManager.Instance.Dialog("You hear a loud noise coming from the door!", 0.04f);
+                base.ChangeSprite(unlockedSprite);
                 Locked = false;
             }
         }
@@ -27,7 +28,15 @@ public class CodeDoor : Door {
 
     public override void Interact()
     {
-        DialogManager.Instance.Dialog("You try to open the door, but the door does't budge.", 0.03f);
+        if (Locked)
+        {
+            DialogManager.Instance.Dialog("You try to open the door, but the door does't budge.", 0.03f);
+        }
+        else
+        {
+            base.Interact();
+        }
+        
     }
 
     public override void Interact(Item Useditem)

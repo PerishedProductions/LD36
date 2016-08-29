@@ -14,7 +14,7 @@ public class Skeleton : Interactable
     {
         if (Useditem is MagnifyingGlass)
         {
-            DialogManager.Instance.Dialog("After closer examination you have concluded that this is a dead Skeleton.", 0.04f);
+            DialogManager.Instance.Dialog("After closer examination you have concluded that this is indeed dead Skeleton.", 0.04f);
         }
         else
         {

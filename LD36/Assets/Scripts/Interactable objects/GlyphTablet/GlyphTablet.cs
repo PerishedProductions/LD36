@@ -7,8 +7,7 @@ public class GlyphTablet : Interactable {
     {
         if (GameManager.Instance.GetInventory().SearchInventory(typeof(Torch)))
         {
-            DialogManager.Instance.Dialog("You look at the tablet", 0.04f);
-            base.Interact();
+            DialogManager.Instance.Dialog("It appears to be a tablet with hieroglyphs", 0.04f);
         }
         else
         {

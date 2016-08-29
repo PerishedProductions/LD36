@@ -29,7 +29,6 @@ public class Door : ScreenTransitionCursor
             Locked = false;
             GameManager.Instance.GetInventory().RemoveItem(Useditem);
             ChangeSprite(unlockedSprite);
-            base.Interact();
         }
         else
         {

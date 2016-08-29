@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class CodeDoor : Door {
@@ -34,7 +35,8 @@ public class CodeDoor : Door {
         }
         else
         {
-            base.Interact();
+            //base.Interact();
+            SceneManager.LoadScene(3);
         }
         
     }

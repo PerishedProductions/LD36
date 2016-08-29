@@ -4,6 +4,8 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
 
+    public AudioSource bgMusic;
+
     private static GameManager _instance;
 
     public static GameManager Instance
@@ -55,5 +57,10 @@ public class GameManager : MonoBehaviour
     public Inventory GetInventory()
     {
         return GameObject.Find("Inventory").GetComponent<Inventory>();
+    }
+
+    public void StartBgMusic()
+    {
+        bgMusic.Play();
     }
 }
